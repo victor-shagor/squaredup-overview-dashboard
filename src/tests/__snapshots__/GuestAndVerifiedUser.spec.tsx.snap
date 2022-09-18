@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-gsnTZi fNokON activechart"
+  data-testid="user-metric-container"
+  height="25rem"
+  width="96.5%"
+>
+  <div
+    className="details"
+  >
+    <p>
+      Guest and Verified Users
+    </p>
+    <div
+      className="columnChartToggleDiv"
+    >
+      <div
+        className="columnChartToggle"
+      >
+        <button
+          className="activeToggleButton"
+          data-testid="yearly-toggle-button"
+          onClick={[Function]}
+        >
+          Yearly
+        </button>
+        <button
+          className="toggleButton"
+          data-testid="monthly-toggle-button"
+          onClick={[Function]}
+        >
+          Monthly
+        </button>
+        <button
+          className="toggleButton"
+          data-testid="daily-toggle-button"
+          onClick={[Function]}
+        >
+          Daily
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="chart"
+  >
+    <div />
+  </div>
+</div>
+`;

@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-gsnTZi fNokON activechart"
+  data-testid="active-user-container"
+  height="25rem"
+  width="96.5%"
+>
+  <div
+    className="details"
+  >
+    <p>
+      Active Users and Active Admins
+    </p>
+    <div
+      className="columnChartToggleDiv"
+    >
+      <div
+        className="columnChartToggle"
+      >
+        <button
+          className="activeToggleButton"
+          data-testid="user-toggle-button"
+          onClick={[Function]}
+        >
+          Users
+        </button>
+        <button
+          className="toggleButton"
+          data-testid="admin-toggle-button"
+          onClick={[Function]}
+        >
+          Admin
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-11xur9t-MuiPaper-root-MuiTableContainer-root"
+  >
+    <table
+      aria-label="customized table"
+      className="MuiTable-root css-1pclhgl-MuiTable-root"
+      role={null}
+    >
+      <thead
+        className="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        role={null}
+      >
+        <tr
+          className="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+          role={null}
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wvnaxz-MuiTableCell-root"
+            scope="col"
+          >
+            S/N
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wvnaxz-MuiTableCell-root"
+            scope="col"
+          >
+            FirstName
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wvnaxz-MuiTableCell-root"
+            scope="col"
+          >
+            LastName
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wvnaxz-MuiTableCell-root"
+            scope="col"
+          >
+            Email
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wvnaxz-MuiTableCell-root"
+            scope="col"
+          >
+            Created
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        role={null}
+      >
+        <tr
+          className="MuiTableRow-root css-1enotpu-MuiTableRow-root"
+          role={null}
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+            scope="row"
+          >
+            1
+          </th>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            test1
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            vandop
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            ddklsdfkd@red.com
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            3 years ago
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root css-1enotpu-MuiTableRow-root"
+          role={null}
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+            scope="row"
+          >
+            2
+          </th>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            Thiago
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            Margarida
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            thiago.margarida@gmail.com
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-132a6sb-MuiTableCell-root"
+          >
+            3 years ago
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

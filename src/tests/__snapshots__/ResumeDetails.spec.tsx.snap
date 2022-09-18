@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-gsnTZi kJQinY"
+  data-testid="resume-details-container"
+  height="25rem"
+  width="46.4%"
+>
+  <div
+    className="details"
+  >
+    <p>
+      Resume Details
+    </p>
+  </div>
+  <div
+    className="piechart"
+  >
+    <div>
+      <div />
+    </div>
+  </div>
+</div>
+`;

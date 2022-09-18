@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-gsnTZi kBCRrN trends"
+  data-testid="trending-container"
+  height="25rem"
+  width="46.4%"
+>
+  <div
+    className="details"
+  >
+    <p>
+      Trending roles
+    </p>
+  </div>
+  <div>
+    <div
+      className="trending"
+    >
+      <div
+        className="sc-dkzDqf bfkrXT"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="nameDiv"
+          >
+            <div
+              className="BulletDiv"
+            />
+            <div
+              className="role"
+            >
+              <p>
+                Engineer
+              </p>
+            </div>
+          </div>
+          <div
+            className="jobs"
+          >
+            6
+             jobs
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dkzDqf bfkrXT sidecard hide"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="nameDiv"
+          >
+            <div
+              className="BulletDiv"
+            />
+            <div
+              className="role"
+            >
+              <p>
+                Nursing
+              </p>
+            </div>
+          </div>
+          <div
+            className="jobs"
+          >
+            5
+             jobs
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <div
+            className="nameDiv"
+          >
+            <div
+              className="BulletDiv"
+            />
+            <div
+              className="role"
+            >
+              <p>
+                Doctor
+              </p>
+            </div>
+          </div>
+          <div
+            className="jobs"
+          >
+            5
+             jobs
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="more"
+    />
+  </div>
+</div>
+`;
