@@ -57,14 +57,18 @@ function Overview() {
   useEffect(() => {
     (async () => {
       const userMetrics = await getGuestsAndVerifiedUsers(columnChartToggle);
-      setGuestAndVerifiedUsers(userMetrics);
+      if (userMetrics) {
+        setGuestAndVerifiedUsers(userMetrics);
+      }
     })();
   }, [columnChartToggle]);
 
   useEffect(() => {
     (async () => {
       const activeUser = await getActiveUsers(activeUserToggle);
-      setActiveUsers(activeUser);
+      if (activeUser) {
+        setActiveUsers(activeUser);
+      }
       updateLoading();
     })();
   }, [activeUserToggle]);
