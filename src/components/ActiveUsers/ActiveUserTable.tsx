@@ -6,6 +6,7 @@ import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { ActiveUserTableProps } from "constants/interfaces";
 
@@ -44,17 +45,21 @@ const ActiveUsersTable = ({ users }: ActiveUserTableProps) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((row, idx) => (
-            <StyledTableRow key={row.email}>
-              <StyledTableCell component="th" scope="row">
-                {idx + 1}
-              </StyledTableCell>
-              <StyledTableCell align="left">{row.firstName}</StyledTableCell>
-              <StyledTableCell align="left">{row.lastName}</StyledTableCell>
-              <StyledTableCell align="left">{row.email}</StyledTableCell>
-              <StyledTableCell align="left">{row.created}</StyledTableCell>
-            </StyledTableRow>
-          ))}
+          {users.length ? (
+            users.map((row, idx) => (
+              <StyledTableRow key={row.email}>
+                <StyledTableCell component="th" scope="row">
+                  {idx + 1}
+                </StyledTableCell>
+                <StyledTableCell align="left">{row.firstName}</StyledTableCell>
+                <StyledTableCell align="left">{row.lastName}</StyledTableCell>
+                <StyledTableCell align="left">{row.email}</StyledTableCell>
+                <StyledTableCell align="left">{row.created}</StyledTableCell>
+              </StyledTableRow>
+            ))
+          ) : (
+            <Box sx={{ minHeight: "18rem" }}>No data yet</Box>
+          )}
         </TableBody>
       </Table>
     </TableContainer>

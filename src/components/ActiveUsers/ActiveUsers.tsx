@@ -1,3 +1,4 @@
+import Button from "components/Button";
 import { ActiveUserProps } from "constants/interfaces";
 import { Card } from "pages/overview/overview.styles";
 import ActiveUsersTable from "./ActiveUserTable";
@@ -18,28 +19,18 @@ const ActiveUsers = ({
         <p>Active Users and Active Admins</p>
         <div className="columnChartToggleDiv">
           <div className="columnChartToggle">
-            <button
-              data-testid="user-toggle-button"
-              className={
-                activeUserToggle === "user"
-                  ? "activeToggleButton"
-                  : "toggleButton"
-              }
+            <Button
+              testId="user-toggle-button"
+              active={activeUserToggle === "user" ? true : false}
+              text="Users"
               onClick={() => onClickActiveUserToggle("user")}
-            >
-              Users
-            </button>
-            <button
-              data-testid="admin-toggle-button"
-              className={
-                activeUserToggle === "admin"
-                  ? "activeToggleButton"
-                  : "toggleButton"
-              }
+            />
+            <Button
+              testId="admin-toggle-button"
+              active={activeUserToggle === "admin" ? true : false}
               onClick={() => onClickActiveUserToggle("admin")}
-            >
-              Admin
-            </button>
+              text="Admin"
+            />
           </div>
         </div>
       </div>

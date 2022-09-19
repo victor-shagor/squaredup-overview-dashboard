@@ -22,69 +22,56 @@ jest.mock("react-apexcharts", () => {
   };
 });
 
-it("render active user component with the correct style", () => {
-  const onClickToggle = jest.fn();
-  render(
-    <GuestAndVerifiedUsers
-      columnChartToggle={"yearly"}
-      guestAndVerifiedUsers={mockData}
-      onClickToggle={onClickToggle}
-    />
-  );
-  expect(screen.getByTestId("user-metric-container")).toHaveStyle(
-    `height:25rem`
-  );
-  expect(screen.getByTestId("user-metric-container")).toHaveStyle(
-    `width:96.5%`
-  );
-});
-
-// it("render active user component with the correct style", () => {
-//   const onClickToggle = jest.fn();
-//   render(
-//     <GuestAndVerifiedUsers
-//       columnChartToggle={"yearly"}
-//       guestAndVerifiedUsers={mockData}
-//       onClickToggle={onClickToggle}
-//     />
-//   );
-//   screen.debug();
-//   expect(screen.findByText("Guest and Verified Users")).toBeInTheDocument();
-//   expect(screen.findByText("Guest Users")).toBeInTheDocument();
-//   expect(screen.findByText("Verified Users")).toBeInTheDocument();
-// });
-
-it("should change active toggle button when  clicked", () => {
-  const onClickToggle = jest.fn();
-  render(
-    <GuestAndVerifiedUsers
-      columnChartToggle={"yearly"}
-      guestAndVerifiedUsers={mockData}
-      onClickToggle={onClickToggle}
-    />
-  );
-  const dailyToggleButton = screen.getByTestId("daily-toggle-button");
-  const monthlyToggleButton = screen.getByTestId("monthly-toggle-button");
-  const yearlyToggleButton = screen.getByTestId("yearly-toggle-button");
-
-  expect(yearlyToggleButton).toHaveStyle(`background-color: #2C2C2C`);
-  expect(monthlyToggleButton).toHaveStyle(`background-color: white`);
-  expect(dailyToggleButton).toHaveStyle(`background-color: white`);
-  5;
-  fireEvent.click(monthlyToggleButton);
-
-  expect(onClickToggle).toHaveBeenCalled();
-});
-
-it("renders correctly", () => {
-  const tree = renderer
-    .create(
+describe("guest and verified user component", () => {
+  it("render active user component with the correct style", () => {
+    const onClickToggle = jest.fn();
+    render(
       <GuestAndVerifiedUsers
         columnChartToggle={"yearly"}
         guestAndVerifiedUsers={mockData}
-        onClickToggle={() => {}}
+        onClickToggle={onClickToggle}
       />
-    )
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+    );
+    expect(screen.getByTestId("user-metric-container")).toHaveStyle(
+      `height:25rem`
+    );
+    expect(screen.getByTestId("user-metric-container")).toHaveStyle(
+      `width:96.5%`
+    );
+  });
+
+  it("should change active toggle button when  clicked", () => {
+    const onClickToggle = jest.fn();
+    render(
+      <GuestAndVerifiedUsers
+        columnChartToggle={"yearly"}
+        guestAndVerifiedUsers={mockData}
+        onClickToggle={onClickToggle}
+      />
+    );
+    const dailyToggleButton = screen.getByTestId("daily-toggle-button");
+    const monthlyToggleButton = screen.getByTestId("monthly-toggle-button");
+    const yearlyToggleButton = screen.getByTestId("yearly-toggle-button");
+
+    expect(yearlyToggleButton).toHaveStyle(`background-color: #2C2C2C`);
+    expect(monthlyToggleButton).toHaveStyle(`background-color: white`);
+    expect(dailyToggleButton).toHaveStyle(`background-color: white`);
+    5;
+    fireEvent.click(monthlyToggleButton);
+
+    expect(onClickToggle).toHaveBeenCalled();
+  });
+
+  it("renders correctly", () => {
+    const tree = renderer
+      .create(
+        <GuestAndVerifiedUsers
+          columnChartToggle={"yearly"}
+          guestAndVerifiedUsers={mockData}
+          onClickToggle={() => {}}
+        />
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

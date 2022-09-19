@@ -37,7 +37,7 @@ function Overview() {
   const [activeUsers, setActiveUsers] = useState([]);
 
   const updateLoading = () => {
-    setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => setLoading(false), 1000);
   };
 
   useEffect(() => {

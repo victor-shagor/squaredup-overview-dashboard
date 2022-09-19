@@ -1,6 +1,7 @@
+import Button from "components/Button";
 import { GuestAndVerifiedUsersProps } from "constants/interfaces";
 import { Card } from "pages/overview/overview.styles";
-import Columnchart from "./ColumnChart";
+import Barchart from "./UserMetricChart";
 
 const GuestAndVerifiedUsers = ({
   columnChartToggle,
@@ -18,44 +19,29 @@ const GuestAndVerifiedUsers = ({
         <p>Guest and Verified Users</p>
         <div className="columnChartToggleDiv">
           <div className="columnChartToggle">
-            <button
-              className={
-                columnChartToggle === "yearly"
-                  ? "activeToggleButton"
-                  : "toggleButton"
-              }
+            <Button
+              testId="yearly-toggle-button"
+              active={columnChartToggle === "yearly" ? true : false}
               onClick={() => onClickToggle("yearly")}
-              data-testid="yearly-toggle-button"
-            >
-              Yearly
-            </button>
-            <button
-              className={
-                columnChartToggle === "monthly"
-                  ? "activeToggleButton"
-                  : "toggleButton"
-              }
+              text="Yearly"
+            />
+            <Button
+              testId="monthly-toggle-button"
+              active={columnChartToggle === "monthly" ? true : false}
               onClick={() => onClickToggle("monthly")}
-              data-testid="monthly-toggle-button"
-            >
-              Monthly
-            </button>
-            <button
-              className={
-                columnChartToggle === "daily"
-                  ? "activeToggleButton"
-                  : "toggleButton"
-              }
+              text="Monthly"
+            />
+            <Button
+              testId="daily-toggle-button"
+              active={columnChartToggle === "daily" ? true : false}
               onClick={() => onClickToggle("daily")}
-              data-testid="daily-toggle-button"
-            >
-              Daily
-            </button>
+              text="Daily"
+            />
           </div>
         </div>
       </div>
       <div className="chart">
-        <Columnchart
+        <Barchart
           series={[
             guestAndVerifiedUsers.guestUser,
             guestAndVerifiedUsers.verifiedUser,

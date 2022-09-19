@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`resume details component renders correctly 1`] = `
 <div
   className="sc-gsnTZi kJQinY"
   data-testid="resume-details-container"
@@ -18,7 +18,11 @@ exports[`renders correctly 1`] = `
     className="piechart"
   >
     <div>
-      <div />
+      <div
+        data-testid="piechart-container"
+      >
+        <div />
+      </div>
     </div>
   </div>
 </div>

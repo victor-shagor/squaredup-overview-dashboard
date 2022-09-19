@@ -1,12 +1,13 @@
-import React from "react";
+import { ResumeDetailsPieChartProps } from "constants/interfaces";
+import PieChart from "components/PieChart";
 
-import Chart from "react-apexcharts";
-import { PieChartProps } from "constants/interfaces";
-
-const PieChart = ({ label, colors, series }: PieChartProps) => {
+const ResumeDetailsPieChart = ({
+  label,
+  series,
+}: ResumeDetailsPieChartProps) => {
   const options = {
     labels: label,
-    colors: colors,
+    colors: ["#5a5bb5", "#5dace6"],
     dataLabels: {
       enabled: false,
     },
@@ -47,22 +48,9 @@ const PieChart = ({ label, colors, series }: PieChartProps) => {
   };
   return (
     <div>
-      <Chart
-        options={{
-          legend: {
-            position: "right",
-            offsetY: 100,
-            height: 300,
-          },
-          ...options,
-        }}
-        type="donut"
-        width={500}
-        height={320}
-        series={series}
-      />
+      <PieChart options={options} width={500} height={320} series={series} />
     </div>
   );
 };
 
-export default PieChart;
+export default ResumeDetailsPieChart;

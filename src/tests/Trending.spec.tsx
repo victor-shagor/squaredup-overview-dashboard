@@ -26,23 +26,28 @@ const mockData = [
     count: 5,
   },
 ];
-it("should render component with the correct style", () => {
-  render(<Trending array={mockData} />);
-  expect(screen.getByTestId("trending-container")).toHaveStyle(`height:25rem`);
-  expect(screen.getByTestId("trending-container")).toHaveStyle(`width:46.4%`);
-});
 
-it("should render no data if array is empty", () => {
-  render(<TrendingCard array={[]} />);
-  expect(screen.getByTestId("empty-state")).toBeInTheDocument();
-});
+describe("Trending components", () => {
+  it("should render component with the correct style", () => {
+    render(<Trending array={mockData} />);
+    expect(screen.getByTestId("trending-container")).toHaveStyle(
+      `height:25rem`
+    );
+    expect(screen.getByTestId("trending-container")).toHaveStyle(`width:46.4%`);
+  });
 
-it("should render loading state if loading is true", () => {
-  render(<TrendingCard array={[]} loading={true} />);
-  expect(screen.getByTestId("loading-state")).toBeInTheDocument();
-});
+  it("should render no data if array is empty", () => {
+    render(<TrendingCard array={[]} />);
+    expect(screen.getByTestId("empty-state")).toBeInTheDocument();
+  });
 
-it("renders correctly", () => {
-  const tree = renderer.create(<Trending array={mockData} />).toJSON();
-  expect(tree).toMatchSnapshot();
+  it("should render loading state if loading is true", () => {
+    render(<TrendingCard array={[]} loading={true} />);
+    expect(screen.getByTestId("loading-state")).toBeInTheDocument();
+  });
+
+  it("renders correctly", () => {
+    const tree = renderer.create(<Trending array={mockData} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

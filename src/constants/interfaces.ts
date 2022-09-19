@@ -1,7 +1,3 @@
-export interface BarChartProps {
-    categories: string[];
-    series: { name: string; data: number[] }[];
-  }
 
 export interface MetricCardProps {
     icon?: any;
@@ -14,10 +10,23 @@ export interface MetricCardProps {
     period?: any;
   }
 
-export interface PieChartProps{
-    series: number[];
-    label: string[];
-    colors: string[];
+export interface ChartProps{
+    series: number[] | UserMetric[];
+    options: any;
+    width: number|string;
+    height: number;
+}
+
+export interface ButtonProps {
+  onClick: () => void
+  active: boolean;
+  text: string;
+  testId?: string
+}
+
+export interface ResumeDetailsPieChartProps{
+ label: string[];
+ series: number[]
 }
 
 export interface SelectProps {
@@ -35,11 +44,21 @@ export interface ResumeDetailsProps{
     sharedAndUnsharedResumes: {sharedResumes: number, unSharedResume: number}
 }
 
+interface UserMetric{
+  name: string, data: number[]
+}
+
+export interface UserMetricBarchartProps{
+  categories: number|string[]
+  series: UserMetric[]
+}
+
 export interface GuestAndVerifiedUsersProps{
     columnChartToggle: string;
     onClickToggle: (toggle: string) => void;
-    guestAndVerifiedUsers: {guestUser: {name: string, data: number[]}, verifiedUser: {name: string, data: number[]}, category: string[]}
-}
+    guestAndVerifiedUsers: {guestUser: UserMetric, verifiedUser: UserMetric, category: string[]}
+  }
+
 
 interface ActiveUser{
   firstName: string, lastName: string, email:string, created: string

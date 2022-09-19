@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`guest and verified user component renders correctly 1`] = `
 <div
-  className="sc-gsnTZi fNokON activechart"
+  className="sc-dkzDqf gxEpim activechart"
   data-testid="user-metric-container"
   height="25rem"
   width="96.5%"
@@ -20,21 +20,21 @@ exports[`renders correctly 1`] = `
         className="columnChartToggle"
       >
         <button
-          className="activeToggleButton"
+          className="sc-bczRLJ gPslix"
           data-testid="yearly-toggle-button"
           onClick={[Function]}
         >
           Yearly
         </button>
         <button
-          className="toggleButton"
+          className="sc-bczRLJ ikDeMp"
           data-testid="monthly-toggle-button"
           onClick={[Function]}
         >
           Monthly
         </button>
         <button
-          className="toggleButton"
+          className="sc-bczRLJ ikDeMp"
           data-testid="daily-toggle-button"
           onClick={[Function]}
         >
@@ -46,7 +46,11 @@ exports[`renders correctly 1`] = `
   <div
     className="chart"
   >
-    <div />
+    <div
+      data-testid="barchart-container"
+    >
+      <div />
+    </div>
   </div>
 </div>
 `;

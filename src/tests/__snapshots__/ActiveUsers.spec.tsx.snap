@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Active admin and user Component renders correctly 1`] = `
 <div
-  className="sc-gsnTZi fNokON activechart"
+  className="sc-dkzDqf gxEpim activechart"
   data-testid="active-user-container"
   height="25rem"
   width="96.5%"
@@ -20,14 +20,14 @@ exports[`renders correctly 1`] = `
         className="columnChartToggle"
       >
         <button
-          className="activeToggleButton"
+          className="sc-bczRLJ gPslix"
           data-testid="user-toggle-button"
           onClick={[Function]}
         >
           Users
         </button>
         <button
-          className="toggleButton"
+          className="sc-bczRLJ ikDeMp"
           data-testid="admin-toggle-button"
           onClick={[Function]}
         >

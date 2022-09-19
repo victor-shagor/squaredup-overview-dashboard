@@ -1,7 +1,10 @@
-import Chart from "react-apexcharts";
-import { BarChartProps } from "constants/interfaces";
+import { UserMetricBarchartProps } from "constants/interfaces";
+import BarChart from "components/BarChart";
 
-const Columnchart = ({ categories, series }: BarChartProps) => {
+const UserMetricBarchart = ({
+  categories,
+  series,
+}: UserMetricBarchartProps) => {
   const option = {
     plotOptions: {
       bar: {
@@ -43,9 +46,8 @@ const Columnchart = ({ categories, series }: BarChartProps) => {
   };
   return (
     <>
-      <Chart
+      <BarChart
         options={{ chart: { type: "bar" }, ...option }}
-        type="bar"
         width={"100%"}
         height={320}
         series={series}
@@ -53,4 +55,4 @@ const Columnchart = ({ categories, series }: BarChartProps) => {
     </>
   );
 };
-export default Columnchart;
+export default UserMetricBarchart;

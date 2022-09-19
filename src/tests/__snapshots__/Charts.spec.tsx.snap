@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Charts renders correctly 1`] = `
+<div
+  data-testid="piechart-container"
+>
+  <div />
+</div>
+`;
+
+exports[`Charts renders correctly 2`] = `
+<div
+  data-testid="barchart-container"
+>
+  <div />
+</div>
+`;
